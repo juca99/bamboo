@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web AR</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script type='text/javascript'
+        src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/three.js/build/ar-threex-location-only.js'></script>
+    <script type='text/javascript'
+        src='https://raw.githack.com/AR-js-org/AR.js/3.4.5/aframe/build/aframe-ar.js'></script>
+    <script type='module' src='dist/bundle.js'></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+    <a-scene vr-mode-ui="enabled: false" arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'>
+
+        <!--change src destination to the object file of what you want to show on screen-->
+        <a-asset-item id="bamboo" src="GF_AR/bamboo.glb"></a-asset-item>
+
+        <a-entity gltf-model="#bamboo" scale="0.5 0.5 0.5" rotation="0 -90 0" position="0 -5 -10"></a-entity>
+
+
+
+
+
+    </a-scene>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
